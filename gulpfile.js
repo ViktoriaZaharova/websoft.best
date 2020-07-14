@@ -46,9 +46,6 @@ gulp.task('libs-js', function () {
     return gulp.src([
         'app/libs/slick/slick.min.js',
         'app/libs/fancybox/jquery.fancybox.js',
-        'app/libs/TweenMax.min.js',
-        'app/libs/ScrollMagic.min.js',
-        'app/libs/animation.gsap.js',
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
@@ -91,8 +88,8 @@ gulp.task('build', ['clean', 'sass', 'jquery', 'img'], function () {
     ])
         .pipe(gulp.dest('dist/css'))
 
-    // var buildFonts = gulp.src('app/fonts/**/*')
-    // .pipe(gulp.dest('dist/fonts'))
+    var buildFonts = gulp.src('app/fonts/**/*')
+    .pipe(gulp.dest('dist/fonts'))
 
     var buildJs = gulp.src('app/js/**/*')
         .pipe(gulp.dest('dist/js'))
