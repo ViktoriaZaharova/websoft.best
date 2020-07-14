@@ -8,7 +8,16 @@ $(document).ready(function () {
         asNavFor: ".main-slider",
         appendArrows: $('.third-arrows'),
         prevArrow: '<div class="main-arrow-prev third-arrow"><img src="img/arrow-back.svg" alt=""></div>',
-        nextArrow: '<div class="main-arrow-next third-arrow"><img src="img/arrow-next.svg" alt=""></div>'
+        nextArrow: '<div class="main-arrow-next third-arrow"><img src="img/arrow-next.svg" alt=""></div>',
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    autoplay: true,
+                    swipe: false
+                }
+            }
+        ]
     });
 
     $('.slider2').slick({
@@ -18,7 +27,16 @@ $(document).ready(function () {
         arrows: false,
         verticalSwiping: true,
         cssEase: 'ease-in-out',
-        asNavFor: ".main-slider"
+        asNavFor: ".main-slider",
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    autoplay: true,
+                    swipe: false
+                }
+            }
+        ]
     });
 
     $('.slider3').slick({
@@ -27,7 +45,16 @@ $(document).ready(function () {
         arrows: false,
         speed: 1000,
         verticalSwiping: true,
-        asNavFor: ".main-slider"
+        asNavFor: ".main-slider",
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    autoplay: true,
+                    swipe: false
+                }
+            }
+        ]
     });
 
     $('.slider4').slick({
@@ -36,7 +63,16 @@ $(document).ready(function () {
         arrows: false,
         speed: 1000,
         verticalSwiping: true,
-        asNavFor: ".main-slider"
+        asNavFor: ".main-slider",
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    autoplay: true,
+                    swipe: false
+                }
+            }
+        ]
     });
     $('.slider5').slick({
         slidesToShow: 1,
@@ -44,7 +80,16 @@ $(document).ready(function () {
         arrows: false,
         speed: 1000,
         verticalSwiping: true,
-        asNavFor: ".main-slider"
+        asNavFor: ".main-slider",
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    autoplay: true,
+                    swipe: false
+                }
+            }
+        ]
     });
 
     $('.price-slider').slick({
@@ -54,7 +99,16 @@ $(document).ready(function () {
         arrows: false,
         fade: true,
         cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
-        touchThreshold: 100
+        touchThreshold: 100,
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    autoplay: true,
+                    touchMove: false
+                }
+            }
+        ]
     });
 
     // slider arrows my-style
@@ -101,8 +155,17 @@ $(document).ready(function () {
                     scrollTop: $(scroll_el).offset().top
                 }, 500);
             }
+
+            $('.menu-list').addClass('active');
+            $('.menu-btn').addClass('active');
+            $('.menu-overlay').removeClass('active');
+
             return false;
+
+
         });
+
+
     });
     //плавный скролл end
 
