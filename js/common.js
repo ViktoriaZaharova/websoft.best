@@ -1,9 +1,9 @@
 $(document).ready(function () {
     // Мобильное меню
-    $(".menu-btn").click(function (e) { 
+    $(".menu-btn").click(function (e) {
         e.preventDefault();
         $(this).toggleClass("active");
-        $(".header-menu").toggleClass("active"); 
+        $(".header-menu").toggleClass("active");
     });
 
     // Плавный скролл
@@ -25,22 +25,24 @@ $(document).ready(function () {
 
     // Анимация появления при скролле
     function reveal() {
-        $('.hero-section, .features-section, .portfolio-section, .templates-section, .howto-section, .contact-section').each(function () {
+        $('.features-section, .portfolio-section, .templates-section, .howto-section, .contact-section').each(function () {
             var sectionTop = $(this).offset().top;
             var windowBottom = $(window).scrollTop() + $(window).height();
-            if (windowBottom > sectionTop + 100) {
-                // Добавляем класс видимости для самой секции
+
+            if (windowBottom > sectionTop - 50) {
                 $(this).addClass('visible');
 
-                // Плавно показываем все карточки внутри
-                $(this).find('.feature-card, .portfolio-card, .template-card, .howto-step, .contact-form-wrap').each(function (i) {
-                    var $el = $(this);
-                    setTimeout(function () { $el.addClass('visible'); }, i * 150);
-                });
+                $(this)
+                    .find('.feature-card, .portfolio-card, .template-card, .howto-step, .contact-form-wrap')
+                    .each(function (i) {
+                        var $el = $(this);
+                        setTimeout(function () {
+                            $el.addClass('visible');
+                        }, i * 150);
+                    });
             }
         });
     }
-
     $(window).on('scroll load', reveal);
 
 });
