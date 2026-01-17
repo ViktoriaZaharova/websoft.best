@@ -6,23 +6,6 @@
   src: url("../fonts/PoiretOne/PoiretOne.eot?#iefix") format("embedded-opentype"), url("../fonts/PoiretOne/PoiretOne.woff") format("woff"), url("../fonts/PoiretOne/PoiretOne.ttf") format("truetype");
 }
 
-@font-face {
-  font-family: "bebas";
-  font-weight: normal;
-  font-style: normal;
-  src: url("../fonts/bebasneue-regular/bebasneue-regular.eot");
-  src: url("../fonts/bebasneue-regular/bebasneue-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/bebasneue-regular/bebasneue-regular.woff") format("woff"), url("../fonts/bebasneue-regular/bebasneue-regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "bebas-bold";
-  font-weight: normal;
-  font-style: normal;
-  src: url("../fonts/bebasneue-bold/bebasneue-bold.eot");
-  src: url("../fonts/bebasneue-bold/bebasneue-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/bebasneue-bold/bebasneue-bold.woff") format("woff"), url("../fonts/bebasneue-bold/bebasneue-bold.ttf") format("truetype");
-}
-
-
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -196,7 +179,7 @@ body {
   min-width: 320px;
   position: relative;
   line-height: normal;
-  font-family: "bebas", sans-serif;
+  font-family: "Inter", sans-serif;
   background: #202739;
 }
 
@@ -256,7 +239,7 @@ textarea {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 0 15px;
-  max-width: 1200px;
+  max-width: 1400px;
   z-index: 2;
   width: 100%;
 }
@@ -315,10 +298,11 @@ textarea {
 .btn {
   cursor: pointer;
   overflow: hidden;
-  font-family: 'bebas-bold', sans-serif;
-  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 1px;
   padding: 0 20px;
   height: 50px;
   -webkit-transition: .5s ease;
@@ -394,7 +378,7 @@ h2:before {
   writing-mode: vertical-rl;
   text-align: right;
   width: auto;
-  font-family: 'bebas-bold', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 20px;
 }
 
@@ -735,8 +719,8 @@ header .box-contacts li:last-child a {
 }
 
 .section-head {
-  max-width: 720px;
-  margin: 0 auto 60px;
+  max-width: 630px;
+  margin: 0 auto 50px;
   text-align: center;
 }
 
@@ -816,7 +800,7 @@ svg {
 /* ===== PORTFOLIO SECTION ===== */
 
 .portfolio-section {
-  padding: 100px 0;
+  padding: 90px 0;
   background-color: #020617;
   color: #ffffff;
 }
@@ -835,14 +819,24 @@ svg {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.portfolio-image {
+  height: 270px;
+}
+
 
 .portfolio-image img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
 .portfolio-content {
   padding: 24px 22px 28px;
+  width: 100%;
+  height: calc(100% - 270px);
+  display: flex;
+  flex-direction: column;
 }
 
 .portfolio-title {
@@ -860,9 +854,10 @@ svg {
 
 .portfolio-link {
   font-size: 16px;
-  font-weight: 600;
+  /* font-weight: 600; */
   color: #CDE855;
   text-decoration: none;
+  margin: auto 0 0;
 }
 
 .portfolio-link:hover {
@@ -909,15 +904,24 @@ svg {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
+.template-image {
+  height: 270px;
+  width: 100%;
+}
 
 .template-image img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
 .template-content {
   padding: 26px 24px 30px;
+  width: 100%;
+  height: calc(100% - 270px);
+  display: flex;
+  flex-direction: column;
 }
 
 .template-title {
@@ -949,6 +953,18 @@ svg {
   background-color: #1e293b;
   color: #cbd5f5;
 }
+
+.template-price {
+  margin: auto 0 30px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 15px 15px;
+  color: #fff;
+  border: 1px solid #1e293b;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+
 
 /* ===== Buttons ===== */
 .template-actions {
