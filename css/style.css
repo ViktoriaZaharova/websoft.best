@@ -626,7 +626,7 @@ header .box-contacts li:last-child a {
 
 /* ===== HERO SECTION ===== */
 .hero-section {
-  padding: 120px 0 100px;
+  padding: 120px 0;
   background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
   color: #ffffff;
 }
